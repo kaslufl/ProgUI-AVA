@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Universidade de Vassouras</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/disciplina.css">
 </head>
 <body>
     <header>
         <h3>Barra de pesquisa</h3>
     </header>
-    <aside>
+    <aside id="side-bar">
         <h1>Logo</h1>
         <nav>
             <ul>
@@ -26,38 +26,36 @@
     <aside id="perfil">
         <a href=""><img src="" alt=""></a>
     </aside>
-    <article>
-        <section id="last-class-stats">
-          <div id="last-class">
-            <a href=""><img src="" alt=""></a>
-                <h3>Titulo</h3>
-                <p>Numero Aula</p>
-                <a href=""><button type="button">Resumir Estudos</button></a>
-          </div>  
-          <div id="stats">
-            <h4>Estatísticas</h4>
-            <ul>
-                <li>
-                    <p>Progresso</p>
-                </li>
-                <li>
-                    <p>Trabalhos</p>
-                </li>
-                <li>
-                    <p>Datas Importantes</p>
-                    <a href=""><img src="" alt=""></a>
-                </li>
-            </ul>
-          </div>
-        </section>
-        <section id="classes">
-            <div>
+    <article id="last-class-stats">
+        <section id="last-class">
+        <a href=""><img src="" alt=""></a>
+            <h3>Titulo</h3>
+            <p>Numero Aula</p>
+            <a href=""><button type="button">Resumir Estudos</button></a>
+        </section>  
+        <section id="stats">
+        <h4>Estatísticas</h4>
+        <ul>
+            <li>
+                <p>Progresso</p>
+            </li>
+            <li>
+                <p>Trabalhos</p>
+            </li>
+            <li>
+                <p>Datas Importantes</p>
                 <a href=""><img src="" alt=""></a>
-                <h3>Titulo</h3>
-                <p>Descrição</p>
-                <p>Conteúdo</p>
-                <a href=""><button>Acessar Aula</button></a>
-            </div>
+            </li>
+        </ul>
+    </section>
+    </article>
+    <article id="classes">
+        <section>
+            <a href=""><img src="" alt=""></a>
+            <h3>Titulo</h3>
+            <p>Descrição</p>
+            <p>Conteúdo</p>
+            <a href=""><button>Acessar Aula</button></a>
         </section>
     </article>
 </body>
