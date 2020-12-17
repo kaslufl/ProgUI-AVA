@@ -1,0 +1,45 @@
+html {
+    font-size: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+    "side-bar search ico"
+    "side-bar class-stats blank"
+    "side-bar board blank";
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 10vh 45vh 45vh;
+}
+
+body header{
+    grid-area: search;
+    display:grid;
+    align-items: center;
+    align-content: center;
+    background-color: #fa9579;
+}
+
+body aside#side-bar{
+    grid-area: side-bar;
+    display:grid;
+    background-color: #654062;
+}
+
+body aside#perfil{
+    grid-area: ico;
+    background-color: #65d6ce;
+}
+
+body article#last-class-stats{
+    grid-area: class-stats;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #ffe9d6;
+}
+
+
+/*fa9579 654062 65d6ce ffe9d6 cd5d7d f6ecf0 a7c5eb 949cdf*/
