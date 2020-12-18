@@ -22,3 +22,9 @@ body article section#stats ul{
     padding: 0;
     grid-area: stats;
 }
+
+body article#classes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
