@@ -1,7 +1,10 @@
 html {
     font-size: 100%;
 }
-
+body *{
+    padding: 0;
+    margin: 0;
+}
 body{
     margin: 0;
     padding: 0;
@@ -10,15 +13,14 @@ body{
     "side-bar search ico"
     "side-bar class-stats blank"
     "side-bar board blank";
-    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-columns: 8vw 84vw 8vw;
     grid-template-rows: 10vh 45vh 45vh;
 }
 
 body header{
     grid-area: search;
-    display:grid;
-    align-items: center;
-    align-content: center;
+    display:flex;
+    justify-content: center;
     background-color: #fa9579;
 }
 
@@ -35,10 +37,53 @@ body aside#perfil{
 
 body article#last-class-stats{
     grid-area: class-stats;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display:grid;
+    grid-template-areas: 
+    "title title"
+    "last-class stats";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5vw 1fr;
     background-color: #ffe9d6;
+}
+
+body article section#last-class{
+    display: grid;
+    grid-area: last-class;
+    grid-template-areas: 
+    "thumbnail title"
+    "thumbnail details"
+    "thumbnail button";
+    grid-template-columns: 20vw 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+body article h1{
+    display: flex;
+    grid-area: title;
+    justify-content: center;
+}
+
+body article a#thumbnail{
+    display:grid;
+    grid-area: thumbnail;
+}
+
+body article h4{
+    display: grid;
+    grid-area: title;
+}   
+
+body article section p{
+    display: grid;
+    grid-area: details;
+} 
+
+body article section a#button{
+    display: grid;
+    grid-area: button;
 }
 
 
