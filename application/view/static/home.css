@@ -24,3 +24,9 @@ body article section#stats ul{
     padding: 0;
     grid-area: stats;
 }
+
+body article#disciplines{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
