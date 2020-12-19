@@ -27,7 +27,21 @@ body header{
 body aside#side-bar{
     grid-area: side-bar;
     display:grid;
+    grid-template-areas: "logo" "side-menu";
     background-color: #654062;
+    justify-items: center;
+}
+
+bodey aside img#logo{
+    grid-area: logo;
+}
+
+body aside nav ul{
+    list-style-type: none;
+    grid-area: side-menu;
+    display: flex;
+    flex-direction: column;
+    /*arrumando o menu */
 }
 
 body aside#perfil{
