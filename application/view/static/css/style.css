@@ -1,0 +1,90 @@
+html {
+    font-size: 100%;
+}
+body *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+    "side-bar search ico"
+    "side-bar class-stats blank"
+    "side-bar board blank";
+    grid-template-columns: 8vw 84vw 8vw;
+    grid-template-rows: 10vh 45vh 45vh;
+}
+
+body header{
+    grid-area: search;
+    display:flex;
+    justify-content: center;
+    background-color: #fa9579;
+}
+
+body aside#side-bar{
+    grid-area: side-bar;
+    display:grid;
+    background-color: #654062;
+}
+
+body aside#perfil{
+    grid-area: ico;
+    background-color: #65d6ce;
+}
+
+body article#last-class-stats{
+    grid-area: class-stats;
+    display:grid;
+    grid-template-areas: 
+    "title title"
+    "last-class stats";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5vw 1fr;
+    background-color: #ffe9d6;
+}
+
+body article section#last-class{
+    display: grid;
+    grid-area: last-class;
+    grid-template-areas: 
+    "thumbnail title"
+    "thumbnail details"
+    "thumbnail button";
+    grid-template-columns: 20vw 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+body article h1{
+    display: flex;
+    grid-area: title;
+    justify-content: center;
+}
+
+body article a#thumbnail{
+    display:grid;
+    grid-area: thumbnail;
+}
+
+body article h4{
+    display: grid;
+    grid-area: title;
+}   
+
+body article section p{
+    display: grid;
+    grid-area: details;
+} 
+
+body article section a#button{
+    display: grid;
+    grid-area: button;
+}
+
+
+/*fa9579 654062 65d6ce ffe9d6 cd5d7d f6ecf0 a7c5eb 949cdf*/
