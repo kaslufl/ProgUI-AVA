@@ -1,9 +1,8 @@
 class Material:
-    def __init__(self, codigo, titulo, tipo, material_URL):
+    def __init__(self, codigo, titulo, tipo):
         self._codigo = codigo
         self.titulo = titulo
         self.tipo = tipo
-        self.url = material_URL
 
     def get_codigo(self):
         return self._codigo
