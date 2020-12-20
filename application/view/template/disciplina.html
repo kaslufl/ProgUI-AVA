@@ -14,7 +14,7 @@
         <h1>Logo</h1>
         <nav>
             <ul>
-                <li><a href=""><img src="../static/img/icon-home.png" alt="Home"></a></li>
+                <li><a href="{{url_for('home')}}"><img src="../static/img/icon-home.png" alt="Home"></a></li>
                 <li><a href=""><img src="../static/img/icon-forum.png" alt="Fóruns"></a></li>
                 <li><a href=""><img src="../static/img/icon-calendar.png" alt="Calendário"></a></li>
                 <li><a href=""><img src="../static/img/icon-msg.png" alt="Mensagens"></a></li>
@@ -53,34 +53,15 @@
         </section>
     </article>
     <article id="classes">
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Titulo</h4>
-            <p>Descrição</p>
-            <p>Conteúdo</p>
-            <a href=""><button>Acessar Aula</button></a>
-        </section>
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Titulo</h4>
-            <p>Descrição</p>
-            <p>Conteúdo</p>
-            <a href=""><button>Acessar Aula</button></a>
-        </section>
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Titulo</h4>
-            <p>Descrição</p>
-            <p>Conteúdo</p>
-            <a href=""><button>Acessar Aula</button></a>
-        </section>
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Titulo</h4>
-            <p>Descrição</p>
-            <p>Conteúdo</p>
-            <a href=""><button>Acessar Aula</button></a>
-        </section>
+        {% for aula in aulas %}
+            <section>
+                <a href=""><img src="" alt=""></a>
+                <h4>Titulo</h4>
+                <p>Descrição</p>
+                <p>Conteúdo</p>
+                <a href=""><button>Acessar Aula</button></a>
+            </section>
+        {% endfor %}
     </article>
 </body>
 </html>

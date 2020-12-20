@@ -14,7 +14,7 @@
         <h1>Logo</h1>
         <nav>
             <ul>
-                <li><a href=""><img src="../static/img/icon-home.png" alt="Home"></a></li>
+                <li><a href="{{url_for('home')}}"><img src="../static/img/icon-home.png" alt="Home"></a></li>
                 <li><a href=""><img src="../static/img/icon-forum.png" alt="Fóruns"></a></li>
                 <li><a href=""><img src="../static/img/icon-calendar.png" alt="Calendário"></a></li>
                 <li><a href=""><img src="../static/img/icon-msg.png" alt="Mensagens"></a></li>
@@ -61,41 +61,15 @@
         </section>
     </article>
     <article id="disciplines">
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Nome Disciplina</h4>
-            <p>Professor</p>
-            <p>Período</p>
-            <a href=""><img src="" alt=""></a>
-        </section>
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Nome Disciplina</h4>
-            <p>Professor</p>
-            <p>Período</p>
-            <a href=""><img src="" alt=""></a>
-        </section>
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Nome Disciplina</h4>
-            <p>Professor</p>
-            <p>Período</p>
-            <a href=""><img src="" alt=""></a>
-        </section>
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Nome Disciplina</h4>
-            <p>Professor</p>
-            <p>Período</p>
-            <a href=""><img src="" alt=""></a>
-        </section>
-        <section>
-            <a href=""><img src="" alt=""></a>
-            <h4>Nome Disciplina</h4>
-            <p>Professor</p>
-            <p>Período</p>
-            <a href=""><img src="" alt=""></a>
-        </section>
+        {% for disciplina in lista_disciplinas %}
+            <section>
+                <a href="{{url_for('disciplina', codigo_disciplina=disciplina.get_codigo())}}"><img src="" alt=""></a>
+                <h4>Nome Disciplina</h4>
+                <p>Professor</p>
+                <p>Período</p>
+                <a href="{{url_for('disciplina', codigo_disciplina=disciplina.get_codigo())}}">teste</a>
+            </section>
+        {% endfor %}
     </article>
 </body>
 </html>
