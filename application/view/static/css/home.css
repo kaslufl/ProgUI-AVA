@@ -42,6 +42,7 @@ body article#disciplines{
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-left: 5.8vw;
+    margin-top: 5vh;
 }
 
 body article#disciplines section{
@@ -83,5 +84,17 @@ body article#disciplines section a#button-icon{
 body article#disciplines section a#button-icon img{
     height: 5vh;
     width: auto;
+}
+
+@media screen and (max-width:1120px){
+    body article#disciplines section{
+        height: 150px;
+        width: 370px;
+    }
+
+    body article section#stats{
+        width: 400px;
+        height: 185px;   
+    }
 }
 /*borda - #707070 preenchimento - #F5F5F5 vermelho - #803031 */

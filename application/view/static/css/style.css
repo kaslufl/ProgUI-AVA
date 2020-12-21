@@ -5,6 +5,7 @@ body *{
     padding: 0;
     margin: 0;
 }
+
 body{
     margin: 0;
     padding: 0;
@@ -14,23 +15,27 @@ body{
     "side-bar class-stats blank"
     "side-bar board blank";
     grid-template-columns: 7vw 84vw 8vw;
-    grid-template-rows: 10vh 45vh auto;
+    grid-template-rows: 10vh auto auto;
     font-family: 'Raleway', sans-serif;
 }
+
 h1, h4 {
     font-family: 'Montserrat', sans-serif;
 }
+
 body header{
     grid-area: search;
     display:flex;
     justify-content: center;
     /*border-bottom: 3px solid #707070;*/
 }
+
 body header input{
     height: 3vh;
     width: 40vw;
     align-self: center;
 }
+
 body aside#side-bar{
     grid-area: side-bar;
     display:grid;
@@ -43,13 +48,13 @@ body aside#side-bar{
     height: 100%;
 }
 
-bodey aside img#logo{
+body aside img#logo{
     grid-area: logo;
 }
 
 body aside#side-bar nav ul{
     list-style-type: none;
-    height: 40vw;
+    height: 100%;
     grid-area: side-menu;
     display: flex;
     flex-direction: column;
@@ -84,6 +89,7 @@ body article h1{
 body article section#last-class{
     display: grid;
     grid-area: last-class;
+    padding: 10px;
     width: 40vw;
     height: 30vh;
     grid-template-areas: 
@@ -120,5 +126,20 @@ body article section a#button{
     width: 10vw;
 }
 
+@media screen and (max-width:1120px){
+    body article#last-class-stats{
+        grid-template-areas: 
+        "title"
+        "last-class"
+        "stats";
+        grid-template-columns: 1fr;
+        grid-template-rows: 5vw 1fr 1fr; 
+    } 
 
+    body article section#last-class{
+        width: 400px;
+        height: 185px;
+        
+    }
+}
 /*borda - #707070 preenchimento - #F5F5F5 vermelho - #803031 */

@@ -38,6 +38,7 @@ body article#classes{
     flex-wrap: wrap;
     flex-direction: row;
     margin-left: 5.8vw;
+    margin-top: 5vh;
 }
 
 body article#classes section{
@@ -75,4 +76,15 @@ body article#disciplines section a#button-icon{
     grid-area: button;
     justify-self: end;
 }
-/* Arrumar as estatísticas,  as aulas, e as estatistiscas da home, depois fazer as medias queries*/
+
+@media screen and (max-width:1120px){
+    body article#classes section{
+        height: 150px;
+        width: 370px;
+    }
+
+    body article section#stats{
+        width: 400px;
+        height: 185px;   
+    }
+}
