@@ -50,7 +50,7 @@ body article#disciplines section{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 20vh;
-    width: 20vw;
+    width: 33vw;
     background-color: #F5F5F5;
     border: 2px solid #707070;
     border-radius: 5px;
@@ -78,5 +78,10 @@ body article#disciplines section a#button-icon{
     display: grid;
     grid-area: button;
     justify-self: end;
+}
+
+body article#disciplines section a#button-icon img{
+    height: 5vh;
+    width: auto;
 }
 /*borda - #707070 preenchimento - #F5F5F5 vermelho - #803031 */

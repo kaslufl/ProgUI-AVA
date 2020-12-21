@@ -1,5 +1,5 @@
 html {
-    font-size: 100%;
+    font-size: 1rem;
 }
 body *{
     padding: 0;
@@ -15,8 +15,11 @@ body{
     "side-bar board blank";
     grid-template-columns: 7vw 84vw 8vw;
     grid-template-rows: 10vh 45vh auto;
+    font-family: 'Raleway', sans-serif;
 }
-
+h1, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
 body header{
     grid-area: search;
     display:flex;
@@ -36,6 +39,8 @@ body aside#side-bar{
     background-color: #F5F5F5;
     justify-items: center;
     border: 2px solid #707070;
+    position: fixed;
+    height: 100%;
 }
 
 bodey aside img#logo{
