@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <h3>Barra de pesquisa</h3>
+        <input type="text" placeholder="Digite algo para pesquisar...">
     </header>
     <aside id="side-bar">
-        <h1>Logo</h1>
+        <img src="../static/img/icon-faculdade.png" alt="Universidade de Vassouras Logo" id="logo">
         <nav>
             <ul>
                 <li><a href="{{url_for('home')}}"><img src="../static/img/icon-home.png" alt="Home"></a></li>
@@ -29,7 +29,7 @@
     <article id="last-class-stats">
         <h1>Seja bem vindo ao Ambiente Virtual de Aprendizagem</h1>
         <section id="last-class">
-            <a href="" id="thumbnail"><img src="" alt=""></a>
+            <a href="" id="thumbnail"><img src="../static/img/icon-placeholder.png" alt="placeholder"></a>
             <h4>Titulo</h4>
             <p>Numero Aula</p>
             <a href="" id="button"><button type="button">Resumir Estudos</button></a>
@@ -38,22 +38,22 @@
             <h4>Estatísticas Gerais</h4>
             <ul>
                 <li>
-                    <img src="" alt="">
+                    <img src="../static/img/icon-classes.png" alt="Aulas">
                     <p>0</p>
                     <p>Novas aulas</p>
                 </li>
                 <li>
-                    <img src="" alt="">
+                    <img src="../static/img/icon-trab.png" alt="Trabalhos">
                     <p>0</p>
                     <p>Trabalhos Pendentes</p>
                 </li>
                 <li>
-                    <img src="" alt="">
+                    <img src="../static/img/icon-mega.png" alt="Anúncios">
                     <p>0</p>
                     <p>Anúncios</p>
                 </li>
                 <li>
-                    <img src="" alt="">
+                    <img src="../static/img/icon-forum.png" alt="Fórum">
                     <p>0</p>
                     <p>Novas Postagens</p>
                 </li>
@@ -63,11 +63,10 @@
     <article id="disciplines">
         {% for disciplina in lista_disciplinas %}
             <section>
-                <a href="{{url_for('disciplina', codigo_disciplina=disciplina.get_codigo())}}"><img src="" alt=""></a>
-                <h4>Nome Disciplina</h4>
+                <a href="{{url_for('disciplina', codigo_disciplina=disciplina.get_codigo())}}" id = "thumb"><img src="../static/img/icon-placeholder.png" alt="placeholder"></a>
+                <h4>{{disciplina.get_titulo()}}</h4>
                 <p>Professor</p>
-                <p>Período</p>
-                <a href="{{url_for('disciplina', codigo_disciplina=disciplina.get_codigo())}}">teste</a>
+                <a href="{{url_for('disciplina', codigo_disciplina=disciplina.get_codigo())}}" id = "button-icon" ><img src="../static/img/icon-more.png" alt="more"></a>
             </section>
         {% endfor %}
     </article>

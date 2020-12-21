@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <h3>Barra de pesquisa</h3>
+        <input type="text" placeholder="Digite algo para pesquisar...">
     </header>
     <aside id="side-bar">
-        <h1>Logo</h1>
+        <img src="../static/img/icon-faculdade.png" alt="Universidade de Vassouras Logo" id="logo">
         <nav>
             <ul>
                 <li><a href="{{url_for('home')}}"><img src="../static/img/icon-home.png" alt="Home"></a></li>
@@ -27,9 +27,9 @@
         <a href=""><img src="../static/img/icon-perfil.png" alt="perfil"></a>
     </aside>
     <article id="last-class-stats">
-        <h1>Título Matéria</h1>
+        <h1>{{ disciplina.get_titulo() }}</h1>
         <section id="last-class">
-            <a href="" id="thumbnail"><img src="" alt=""></a>
+            <a href="" id="thumbnail"><img src="../static/img/icon-placeholder.png" alt="placeholder"></a>
             <h4>Titulo</h4>
             <p>Numero Aula</p>
             <a href="" id="button"><button type="button">Resumir Estudos</button></a>
@@ -39,7 +39,7 @@
             <ul>
                 <li>
                     <p>Progresso</p>
-                    <p>0%</p>
+                    <p>1</p>
                 </li>
                 <li>
                     <p>Trabalhos</p>
@@ -47,7 +47,7 @@
                 </li>
                 <li>
                     <p>Datas Importantes</p>
-                    <a href=""><img src="" alt=""></a>
+                    <a href=""><img src="../static/img/icon-calendar.png" alt=""></a>
                 </li>
             </ul>
         </section>
@@ -55,10 +55,9 @@
     <article id="classes">
         {% for aula in aulas %}
             <section>
-                <a href=""><img src="" alt=""></a>
-                <h4>Titulo</h4>
+                <a href="" id="thumb"><img src="../static/img/icon-placeholder.png" alt=""></a>
+                <h4>{{ aula.get_titulo() }}</h4>
                 <p>Descrição</p>
-                <p>Conteúdo</p>
                 <a href=""><button>Acessar Aula</button></a>
             </section>
         {% endfor %}

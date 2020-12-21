@@ -13,40 +13,49 @@ body{
     "side-bar search ico"
     "side-bar class-stats blank"
     "side-bar board blank";
-    grid-template-columns: 8vw 84vw 8vw;
-    grid-template-rows: 10vh 45vh 45vh;
+    grid-template-columns: 7vw 84vw 8vw;
+    grid-template-rows: 10vh 45vh auto;
 }
 
 body header{
     grid-area: search;
     display:flex;
     justify-content: center;
-    background-color: #fa9579;
+    /*border-bottom: 3px solid #707070;*/
 }
-
+body header input{
+    height: 3vh;
+    width: 40vw;
+    align-self: center;
+}
 body aside#side-bar{
     grid-area: side-bar;
     display:grid;
     grid-template-areas: "logo" "side-menu";
-    background-color: #654062;
+    grid-template-rows: 17vh auto;
+    background-color: #F5F5F5;
     justify-items: center;
+    border: 2px solid #707070;
 }
 
 bodey aside img#logo{
     grid-area: logo;
 }
 
-body aside nav ul{
+body aside#side-bar nav ul{
     list-style-type: none;
+    height: 40vw;
     grid-area: side-menu;
     display: flex;
     flex-direction: column;
-    /*arrumando o menu */
+    justify-content: space-around;
 }
 
 body aside#perfil{
     grid-area: ico;
-    background-color: #65d6ce;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 body article#last-class-stats{
@@ -55,34 +64,39 @@ body article#last-class-stats{
     grid-template-areas: 
     "title title"
     "last-class stats";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 5vw 1fr;
-    background-color: #ffe9d6;
-}
-
-body article section#last-class{
-    display: grid;
-    grid-area: last-class;
-    grid-template-areas: 
-    "thumbnail title"
-    "thumbnail details"
-    "thumbnail button";
-    grid-template-columns: 20vw 1fr;
-    grid-template-rows: 1fr 1fr 1fr; 
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
+    place-items: center;
 }
 
 body article h1{
     display: flex;
     grid-area: title;
     justify-content: center;
+    align-self: center;
+}
+
+body article section#last-class{
+    display: grid;
+    grid-area: last-class;
+    width: 40vw;
+    height: 30vh;
+    grid-template-areas: 
+    "thumbnail title"
+    "thumbnail details"
+    "thumbnail button";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #F5F5F5; 
+    border: 2px solid #707070;
+    border-radius: 5px;
+    align-items: center;
 }
 
 body article a#thumbnail{
     display:grid;
     grid-area: thumbnail;
+    justify-content: center;
 }
 
 body article h4{
@@ -98,7 +112,8 @@ body article section p{
 body article section a#button{
     display: grid;
     grid-area: button;
+    width: 10vw;
 }
 
 
-/*fa9579 654062 65d6ce ffe9d6 cd5d7d f6ecf0 a7c5eb 949cdf*/
+/*borda - #707070 preenchimento - #F5F5F5 vermelho - #803031 */

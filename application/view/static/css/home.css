@@ -6,6 +6,12 @@ body article section#stats{
     display: grid;
     grid-area: stats;
     grid-template-areas: "title" "stats";
+    width: 32vw;
+    height: 30vh;
+    background-color: #F5F5F5;
+    border: 2px solid #707070;
+    border-radius: 5px;
+    place-items: center;
 }
 
 body article section#stats h4{
@@ -23,10 +29,54 @@ body article section#stats ul{
     margin: 0;
     padding: 0;
     grid-area: stats;
+    align-content: flex;
+}
+
+body article section ul li{
+    place-items: center;
 }
 
 body article#disciplines{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 5.8vw;
 }
+
+body article#disciplines section{
+    display: grid;
+    grid-template-areas: "thumbnail title" "thumbnail teacher" "thumbnail button";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 20vh;
+    width: 20vw;
+    background-color: #F5F5F5;
+    border: 2px solid #707070;
+    border-radius: 5px;
+    margin: 5px 30px 10px;
+    align-items: center;
+}
+
+body article#disciplines section a#thumb{
+    display: grid;
+    grid-area: thumbnail;
+    justify-content: center;
+}
+
+body article#disciplines section h4{
+    display: grid;
+    grid-area: title;
+}
+
+body article#disciplines section p{
+    display: grid;
+    grid-area: teacher;
+}
+
+body article#disciplines section a#button-icon{
+    display: grid;
+    grid-area: button;
+    justify-self: end;
+}
+/*borda - #707070 preenchimento - #F5F5F5 vermelho - #803031 */

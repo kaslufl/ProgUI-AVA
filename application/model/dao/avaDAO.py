@@ -19,7 +19,7 @@ class AvaDAO:
 
         lista_aulas = [aula1, aula2, aula3]
 
-        disciplina1 = Disciplina(1, "Laboratório de Programação de Interface com Usuário")
+        disciplina1 = Disciplina(1, "Lab. de Programação de Interface com Usuário")
         disciplina1.set_aulas(lista_aulas)
         disciplina2 = Disciplina(2, "Modelagem de Banco de Dados")
         disciplina2.set_aulas(lista_aulas)
